@@ -219,12 +219,6 @@ func resourceSFSSharingV2Read(d *schema.ResourceData, meta interface{}) error {
 		return fmt.Errorf("Error retrieving OpenTelekomCloud Shares: %s", err)
 	}
 
-	//expLocs := n.ExportLocations
-	//ExpLocations := make([]string, len(expLocs))
-	//for i, val := range expLocs {
-	//	ExpLocations[i] = val
-	//}
-
 	d.Set("id", n.ID)
 	d.Set("name", n.Name)
 	d.Set("share_proto", n.ShareProto)
